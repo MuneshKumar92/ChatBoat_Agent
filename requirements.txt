@@ -1,0 +1,7 @@
+fastapi==0.114.0
+uvicorn[standard]==0.23.1
+langchain==0.3.25
+langchain-tavily==0.2.15
+aiohttp>=3.11.14,<4.0.0
+requests>=2.32.3,<3.0.0
+python-dotenv==1.0.1
