@@ -14,18 +14,14 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 # Step2: Setup LLM & Tools
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
-from langchain_community.tools.tavily_search import TavilySearchResults
 
 openai_llm = ChatOpenAI(model="gpt-3.5-turbo")
 groq_llm = ChatGroq(model="llama-3.3-70b-versatile")
-
-# search_tool = TavilySearchResults(max_results=2)
 
 
 # Step3: Setup AI Agent with Search tool functionality
 
 # from langgraph.prebuilt import create_react_agent
-from langgraph.prebuilt import create_react_agent
 from langchain.agents import create_agent
 from langchain_tavily import TavilySearch
 from langchain_core.messages.ai import AIMessage

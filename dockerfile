@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir pipenv
 COPY Pipfile .
 COPY Pipfile.lock .
 
-RUN pipenv install --system --deploy --ignore-pipfile
+RUN pipenv install --system --deploy --ignore-pipfile --clear
 
 COPY . .
 
