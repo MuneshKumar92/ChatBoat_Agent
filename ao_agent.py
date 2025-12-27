@@ -30,7 +30,7 @@ from langchain.agents import create_agent
 from langchain_tavily import TavilySearch
 from langchain_core.messages.ai import AIMessage
 
-# search_tool1 = TavilySearch(max_results=3)
+search_tool1 = TavilySearch(max_results=3)
 
 system_prompt = "Act as an AI Chatbot who is smart and friendly"
 
