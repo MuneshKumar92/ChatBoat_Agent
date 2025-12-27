@@ -12,6 +12,7 @@ langchain-community = "*"
 pydantic = "*"
 fastapi = "*"
 uvicorn = "*"
+langchain-tavily = "*"
 
 [dev-packages]
 
