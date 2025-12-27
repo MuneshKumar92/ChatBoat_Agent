@@ -1,6 +1,4 @@
 .env
-git add .gitignore
-git commit -m "Remove env file and ignore secrets"
 
 
 
