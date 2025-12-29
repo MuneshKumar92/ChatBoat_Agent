@@ -27,7 +27,7 @@ app = FastAPI(title="LangGraph AI Agent")
 
 @app.get("/agent")
 def get_agent():
-    return {"Message", "Hello From the Agent"}
+    return {"Message": "Hello From the Agent"}
 
 
 @app.post("/chat")
