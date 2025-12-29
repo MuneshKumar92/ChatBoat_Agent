@@ -25,6 +25,11 @@ ALLOWED_MODEL_NAMES = [
 app = FastAPI(title="LangGraph AI Agent")
 
 
+@app.get("/")
+def read_root():
+    return {"status": "Server is Alive"}
+
+
 @app.get("/agent")
 def get_agent():
     return {"Message": "Hello From the Agent"}
