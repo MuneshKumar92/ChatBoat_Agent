@@ -21,9 +21,9 @@ groq_llm = ChatGroq(model="llama-3.3-70b-versatile")
 
 # Step3: Setup AI Agent with Search tool functionality
 
-from langgraph.prebuilt import create_react_agent
+# from langgraph.prebuilt import create_react_agent
 
-# from langchain.agents import creat_agent
+from langchain.agents import create_agent
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_core.messages.ai import AIMessage
 
@@ -54,7 +54,7 @@ def get_response_from_ai_agent(llm_id, query, allow_search, system_prompt, provi
 
     tools = [TavilySearchResults(k=2)] if allow_search else []
 
-    agent = create_react_agent(model=llmName, tools=tools, state_modifier=system_prompt)
+    agent = create_agent(model=llmName, tools=tools, system_prompt=system_prompt)
     state = {"messages": query}
     response = agent.invoke(state)
     messages = response.get("messages")
