@@ -27,7 +27,7 @@ app = FastAPI(title="LangGraph AI Agent")
 
 @app.get("/")
 def read_root():
-    return {"status": "Server is Alive"}
+    return {"status": "Server is up and running", "endpoint": "/agent"}
 
 
 @app.get("/agent")
