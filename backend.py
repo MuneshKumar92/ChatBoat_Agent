@@ -18,6 +18,7 @@ from ao_agent import get_response_from_ai_agent
 ALLOWED_MODEL_NAMES = [
     "llama-3.3-70b-versatile",
     "llama-3.3-70b-8192",
+    "llama-3.1-8b-instant",
     "gpt-4o-mini",
     "gpt-3.5-turbo",
 ]

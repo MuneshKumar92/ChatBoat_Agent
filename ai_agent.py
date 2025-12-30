@@ -31,7 +31,7 @@ from langchain_openai import ChatOpenAI
 from langchain_community.tools.tavily_search import TavilySearchResults
 
 openai_llm = ChatOpenAI(model="gpt‑3.5‑turbo")
-groq_llm = ChatGroq(model="llama-3.3-70b-versatile")
+groq_llm = ChatGroq(model="llama-3.1-8b-instant")
 
 search_tool = TavilySearchResults(max_results=2)
 

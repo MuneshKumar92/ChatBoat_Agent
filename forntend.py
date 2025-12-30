@@ -4,7 +4,7 @@ import requests
 from ao_agent import send_email_gmail
 
 
-st.set_page_config(page_title="Lang Graph AI Agent", layout="wide")
+st.set_page_config(page_title="Lang Graph AI Agent", layout="centered")
 st.title("AI Chatbot Agents")
 st.write("Create and interact with the AI Agents!")
 
@@ -12,21 +12,20 @@ system_prompt = st.text_area(
     "Define your AI Agent: ", height=70, placeholder="Type your system prompt here..."
 )
 
-MODEL_NAMES_GROQ = ["llama-3.3-70b-versatile", "llama-3.3-70b-8192"]
-MODEL_NAME_OPENAI = ["gpt-3.5-turbo"]
+MODEL_NAMES_GROQ = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
+# MODEL_NAME_OPENAI = ["gpt-3.5-turbo"]
 
-provider = st.radio("Select the provider:", ("Groq", "OpenAI"))
+provider = st.radio("Select the provider:", ("Groq"))
 
 if provider == "Groq":
     select_model = st.selectbox("Select Groq Model:", MODEL_NAMES_GROQ)
-elif provider == "OpenAI":
-    select_model = st.selectbox("Select OpenAI Model:", MODEL_NAME_OPENAI)
+
 
 allow_web_search = st.checkbox("Allow Web Search")
 
 userQuesry = st.text_area("Enter you wuery", height=150, placeholder="Ask Anything")
 
-API_URL = "http://13.211.189.248:8501/chat"
+API_URL = "http://13.211.189.248:8000/chat"
 
 if st.button("Ask agent"):
 
